@@ -25,27 +25,30 @@ import video from '../components/Home/video/video.vue';
 import newsDetail from '../components/Home/News/detail.vue';
 // 图片详情
 import shareDetail from '../components/Home/Share/detail.vue';
+// 商品详情
+import buyDetail from '../components/Home/Buy/detail.vue';
 
 // 2 创建路由对象
 let router = new VueRouter({
-  linkActiveClass: 'mui-active',
-  routes: [
-    {path: '/', redirect: '/home'},
-    {path: '/home', component: home},
-    {path: '/member', component: member},
-    {path: '/shopcar', component: shopcar},
-    {path: '/search', component: search},
+    linkActiveClass: 'mui-active',
+    routes: [
+        { path: '/', redirect: '/home' },
+        { path: '/home', component: home },
+        { path: '/member', component: member },
+        { path: '/shopcar', component: shopcar },
+        { path: '/search', component: search },
 
-    {path: '/news', component: news},
-    {path: '/buy', component: buy},
-    {path: '/contact', component: contact},
-    {path: '/feedback', component: feedback},
-    {path: '/share', component: share},
-    {path: '/video', component: video},
+        { path: '/news', component: news },
+        { path: '/buy', component: buy },
+        { path: '/contact', component: contact },
+        { path: '/feedback', component: feedback },
+        { path: '/share', component: share },
+        { path: '/video', component: video },
 
-    {name: 'newsDetail', path: '/news/:id', component: newsDetail, props: true},
-    {name: 'shareDetail', path: '/share/:id', component: shareDetail, props: true}
-  ]
+        { name: 'newsDetail', path: '/news/:id', component: newsDetail, props: true },
+        { name: 'shareDetail', path: '/share/:id', component: shareDetail, props: true },
+        { name: 'buyDetail', path: '/buy/:id', component: buyDetail, props: true }
+    ]
 });
 
 // 导出路由对象
